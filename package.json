@@ -7,7 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
-  "author": "Scott Jones",
+  "author": {
+    "name": "Scott Jones",
+    "email": "scottdj92@gmail.com",
+    "url": "https://www.scottthedev.com"
+  },
   "license": "ISC",
   "devDependencies": {
     "bulma": "^0.7.0",
