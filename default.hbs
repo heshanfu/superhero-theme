@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{meta_title}}</title>
+    <link rel="stylesheet" href="{{asset "dist/main.bundle.css"}}"/>
 
     {{ghost_head}}
 </head>
@@ -16,6 +17,7 @@
     {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
     {{{block "scripts"}}}
 
+    <script src="{{asset "assets/js/vendor/prism.js"}}"/>
     {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
     {{ghost_foot}}
 </body>
