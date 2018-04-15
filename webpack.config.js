@@ -1,11 +1,12 @@
 var ETP = require("extract-text-webpack-plugin");
 var PurifyCSSPlugin = require("purifycss-webpack");
 var path = require('path');
+var glob = require("glob");
 
 module.exports = {
     entry: ["./assets/index.scss"],
     output: {
-        filename: "assets/css/[name].bundle.css",
+        filename: "assets/css/[name].[ext]"
     },
     watch: true,
     module: {
@@ -21,15 +22,15 @@ module.exports = {
                 test: /\.ttf$/,
                 exclude: /node_modules/,
                 use: "url-loader"
-            }
+            },
         ]
     },
     plugins: [
         new ETP({
             filename: "assets/css/[name].bundle.css",
         }),
-        // new PurifyCSSPlugin({
-        //     paths: [path.resolve(__dirname, "dist/main.bundle.css")],
-        // })
+        new PurifyCSSPlugin({
+            paths: glob.sync(path.resolve(__dirname, "**/*.hbs")),
+        })
     ]
 }
