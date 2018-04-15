@@ -1,20 +1,18 @@
 .post-list {
     padding: 25px 0;
-    .post-item {
-        .excerpt {
-            margin-top: 15px;
-        }
+    .excerpt {
+        margin-top: 15px;
+    }
 
-        .post-image {
-            border-radius: 5px;
-            background-position: center;
-            height: 400px;
-        }
+    .post-image {
+        border-radius: 5px;
+        background-position: center;
+        height: 400px;
+    }
 
-        .post-title {
-            display: inline;
-            font-family: "Fira Code", monospace;
-            font-size: 2em;
-        }
+    .post-title {
+        display: inline;
+        font-family: "Fira Code", monospace;
+        font-size: 2em;
     }
 }
