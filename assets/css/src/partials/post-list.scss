@@ -1,0 +1,14 @@
+.post-list {
+    padding: 25px 0;
+    .post-item {
+        .post-image {
+            border-radius: 5px;
+            background-position: center;
+            height: 400px;
+        }
+
+        .post-title {
+            display: inline;
+        }
+    }
+}

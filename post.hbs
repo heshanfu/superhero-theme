@@ -3,7 +3,6 @@
 {{#post}}
 
 <main id="site-main" role="main">
-    {{> header}}
 
     {{#if feature_image}}
     {{!-- <figure class="post-full-image image is-5by4" style="background-image: url({{feature_image}})">
@@ -14,6 +13,7 @@
 
     <section class="content container">
         <h1 class="post-title">{{title}}</h1>
+        <span class="post-subtitle">{{date published_at}}</span>
         {{content}}
     </section>
 </main>
