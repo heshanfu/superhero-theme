@@ -1,12 +1,16 @@
-.post-title {
-    font-size: 2em;
-    text-align: center;
-    font-family: "Fira Code", monospace;
-}
+.content {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    padding: 25px 0;
+    .post-title {
+        font-size: 2em;
+        text-align: center;
+        font-family: "Fira Code", monospace;
+    }
 
-.post-subtitle {
-    font-size: 1em;
-    text-align: center;
-    font-family: "Fira Code", monospace;
-    display: block;
+    .post-subtitle {
+        font-size: 1em;
+        text-align: center;
+        font-family: "Fira Code", monospace;
+        display: block;
+    }
 }

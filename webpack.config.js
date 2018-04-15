@@ -6,7 +6,7 @@ var glob = require("glob");
 module.exports = {
     entry: ["./assets/index.scss"],
     output: {
-        filename: "assets/css/[name].[ext]"
+        filename: "assets/css/[name].bundle.css"
     },
     watch: true,
     module: {
@@ -30,7 +30,8 @@ module.exports = {
             filename: "assets/css/[name].bundle.css",
         }),
         new PurifyCSSPlugin({
-            paths: glob.sync(path.resolve(__dirname, "**/*.hbs")),
+            paths: glob.sync(path.join(__dirname, "*.hbs")),
+            minimize: true,
         })
     ]
 }
