@@ -5,8 +5,9 @@ var path = require('path');
 module.exports = {
     entry: ["./assets/index.scss"],
     output: {
-        filename: "dist/[name].bundle.css",
+        filename: "assets/css/[name].bundle.css",
     },
+    watch: true,
     module: {
         rules: [
             {
@@ -17,15 +18,15 @@ module.exports = {
                 })
             },
             {
-                test: /\.(ttf|svg)$/,
+                test: /\.ttf$/,
                 exclude: /node_modules/,
-                use: "url-loader?limit=1024&name=dist/fonts/[name].[ext]"
+                use: "url-loader"
             }
         ]
     },
     plugins: [
         new ETP({
-            filename: "./dist/[name].bundle.css",
+            filename: "assets/css/[name].bundle.css",
         }),
         // new PurifyCSSPlugin({
         //     paths: [path.resolve(__dirname, "dist/main.bundle.css")],

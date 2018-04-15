@@ -1,1 +1,12 @@
 @import "~bulma";
+@import "./css/src/partials/floating-header.scss";
+@import "./css/src/partials/header.scss";
+
+@font-face {
+    font-family: "Fira Code";
+    src:url("../assets/fonts/FiraCode-Regular.ttf");
+}
+
+.content {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
