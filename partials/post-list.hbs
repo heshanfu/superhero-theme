@@ -1,8 +1,24 @@
-<div class="post-list">
-    {{#foreach posts}}
-        <article class="post-item">
-            post item
-        </article>
-    {{/foreach}}
-    {{pagination}}
+<div class="post-list container">
+    <div class="tile is-ancestor">
+        {{#foreach posts}}
+        <div class="tile is-parent">
+            <article class="post-item tile is-child is-4 box">
+                <a href="{{url}}">
+                    <h1>{{title}}</h1>
+                </a>
+                <em class="time-posted">{{date published_at timeago="true"}}</em>
+                <section>
+                    <p class="excerpt">
+                        {{excerpt words="25"}}...
+                    </p>
+                </section>
+                <footer>
+                    <a class="continue" href="{{url}}">Continue Reading</a>
+                </footer>
+            </article>
+        </div>
+        {{/foreach}}
+    </div>
+</div>
+{{pagination}}
 </div>
