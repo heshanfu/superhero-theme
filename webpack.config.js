@@ -16,7 +16,10 @@ module.exports = {
                 use: ETP.extract({
                     fallback: "style-loader",
                     use: ["css-loader", "sass-loader"]
-                })
+                }),
+                exclude: [
+                    "~bulma/sass/elements/tag.sass"
+                ]
             },
             {
                 test: /\.ttf$/,
