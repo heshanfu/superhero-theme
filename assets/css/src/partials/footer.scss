@@ -1,4 +1,10 @@
 .footer {
     background-color: black;
     color: white;
+
+    svg {
+        fill: currentColor;
+        height: 30px;
+        vertical-align: middle;
+    }
 }

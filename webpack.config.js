@@ -29,9 +29,9 @@ module.exports = {
         new ETP({
             filename: "assets/css/[name].bundle.css",
         }),
-        new PurifyCSSPlugin({
-            paths: glob.sync(path.join(__dirname, "*.hbs")),
-            minimize: true,
-        })
+        // new PurifyCSSPlugin({
+        //     paths: glob.sync(path.join(__dirname, "*.hbs")),
+        //     minimize: true,
+        // })
     ]
 }
